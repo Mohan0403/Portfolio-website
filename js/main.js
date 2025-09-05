@@ -1,14 +1,11 @@
 
-
-// Wait for the DOM to fully load
 document.addEventListener('DOMContentLoaded', () => {
-  /* ========== FOOTER YEAR ========== */
   const year = document.getElementById('year');
   if (year) {
     year.textContent = new Date().getFullYear();
   }
 
-  /* ========== TYPING EFFECT ========== */
+
   const typingElement = document.getElementById("typing");
   if (typingElement) {
     const texts = [
@@ -17,19 +14,18 @@ document.addEventListener('DOMContentLoaded', () => {
       "Open Source Contributor",
       "Tech Explorer"
     ];
-    let i = 0;  // index of text
-    let j = 0;  // index of character
+    let i = 0;  
+    let j = 0;  
     let isDeleting = false;
 
     function typeEffect() {
       const current = texts[i];
 
       if (!isDeleting) {
-        // typing forward
         typingElement.textContent = current.substring(0, j + 1);
         j++;
         if (j === current.length) {
-          // pause when full word is typed
+          
           isDeleting = true;
           setTimeout(typeEffect, 1200);
           return;
@@ -52,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
     typeEffect();
   }
 
-  /* ========== BACKGROUND TOGGLE ========== */
   const btn = document.getElementById("toggleBg");
   if (btn) {
     btn.addEventListener("click", () => {

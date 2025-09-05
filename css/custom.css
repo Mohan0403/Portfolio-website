@@ -1,15 +1,14 @@
 :root{
-  --accent: #00adb5;        /* teal accent */
-  --accent-2: #ff6f61;     /* warm secondary */
-  --bg: #0b0f14;           /* page background */
-  --card: #0f1720;         /* card */
+  --accent: #00adb5;        
+  --accent-2: #ff6f61;     
+  --bg: #0b0f14;           
+  --card: #0f1720;         
   --muted: #94a3b8;
   --text: #e6eef6;
   --accent-strong: #00c7d0;
   --glass: rgba(255,255,255,0.03);
 }
 
-/* BASE */
 *{box-sizing:border-box}
 html,body{height:100%}
 body {
@@ -18,20 +17,18 @@ body {
   transition: background 1s ease, color 1s ease;
 }
 
-/* Alternate background */
 body.alt-bg {
-  background: #243b55; /* dark blue shade */
+  background: #243b55; 
   color: #f0f6fc;
 }
 body.loaded{opacity:1}
 a{color:var(--accent); text-decoration:none}
 a:hover{text-decoration:underline}
 
-/* NAV */
 .navbar-brand{font-family:'Poppins',sans-serif;letter-spacing:.4px;}
 .bg-dark{background:#071018 !important}
 
-/* HERO animated gradient + floating blur orbs */
+
 .animated-bg{
   background: linear-gradient(270deg, #0d1117, #141f2a, #253b48, #0d1117);
   background-size: 800% 800%;
@@ -45,7 +42,6 @@ a:hover{text-decoration:underline}
   100%{ background-position: 0% 50%; }
 }
 
-/* Orbs */
 .hero-section::before,
 .hero-section::after{
   content:""; position:absolute; border-radius:50%; filter: blur(120px); opacity:.45; pointer-events:none;
@@ -63,7 +59,6 @@ a:hover{text-decoration:underline}
 @keyframes orbMove1{ 0%{transform:translate(0,0)}50%{transform:translate(40px,-40px)}100%{transform:translate(0,0)} }
 @keyframes orbMove2{ 0%{transform:translate(0,0)}50%{transform:translate(-40px,40px)}100%{transform:translate(0,0)} }
 
-/* Hero blob (glass) */
 .hero-blob{
   width:220px; height:220px; border-radius:43% 57% 60% 40% / 48% 54% 46% 52%;
   margin:0 auto;
@@ -74,7 +69,6 @@ a:hover{text-decoration:underline}
 }
 @keyframes float{ 0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)} }
 
-/* 3D cube */
 .cube-wrap{ perspective:700px; display:flex; justify-content:center; }
 .cube{ width:120px; height:120px; position:relative; transform-style:preserve-3d; transform: rotateX(-15deg) rotateY(0deg); animation:cubeSpin 8s linear infinite; }
 .cube .face{ position:absolute; width:120px; height:120px; display:flex; align-items:center; justify-content:center; font-weight:700; color:var(--bg); border-radius:10px;
@@ -88,7 +82,6 @@ a:hover{text-decoration:underline}
 .cube .bottom{ transform: rotateX(-90deg) translateZ(60px); }
 @keyframes cubeSpin{ 0%{transform:rotateX(-15deg) rotateY(0)} 100%{transform:rotateX(-15deg) rotateY(360deg)} }
 
-/* CARDS and accents */
 .card.card-dark{ background:var(--card); color:var(--text); border:0; transition: transform .33s ease, box-shadow .33s ease; }
 .card.card-dark:hover{ transform: translateY(-8px); box-shadow: 0 30px 70px rgba(0,0,0,0.6); border-radius:12px; }
 .project-card .card-img-top{ object-fit:cover; height:220px; border-top-left-radius:12px; border-top-right-radius:12px; }
@@ -98,11 +91,9 @@ a:hover{text-decoration:underline}
 .btn-accent:hover{ background:var(--accent-strong); color:#022; transform: translateY(-3px); transition: .18s ease; }
 .badge.bg-accent{ background:var(--accent); color:#022 }
 
-/* Typography */
 h1,h2,h3{ font-family:'Poppins', sans-serif; letter-spacing:.2px; }
 body, p, small, li{ font-family:'Inter', sans-serif; line-height:1.6; color:var(--text) }
 
-/* Gradient text animation for headings (optional use) */
 .text-gradient{
   background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent));
   -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-size:200% auto;
@@ -110,11 +101,9 @@ body, p, small, li{ font-family:'Inter', sans-serif; line-height:1.6; color:var(
 }
 @keyframes gradientMove{ to{ background-position:200% center } }
 
-/* Reveal animations (with delay using --d) */
 .fade-in{ opacity:0; transform: translateY(18px); animation: fadeInUp .65s ease forwards; animation-delay: var(--d, .1s); }
 @keyframes fadeInUp{ to{ opacity:1; transform: translateY(0); } }
 
-/* page-specific micro animations */
 .page-about .card.card-dark{ transform: translateX(-18px); animation: slideIn .6s ease forwards; animation-delay: .1s }
 @keyframes slideIn{ to{ transform:none } }
 .page-projects .project-card{ transform: scale(.96); animation: popIn .45s ease forwards; }
@@ -122,14 +111,12 @@ body, p, small, li{ font-family:'Inter', sans-serif; line-height:1.6; color:var(
 .page-contact form.card{ transform: scale(.92); animation: zoomIn .5s ease forwards; }
 @keyframes zoomIn{ to{ transform:none } }
 
-/* Typing effect cursor */
 #typing{ border-right: 2px solid var(--accent); white-space:nowrap; overflow:hidden; display:inline-block; padding-right:.3rem; }
 @keyframes blink{ 50%{ border-color:transparent } }
 
-/* Page exit */
 body.page-exit{ opacity:0; transition: opacity .35s ease; }
 
-/* Responsive tweaks */
+
 @media (max-width: 768px){
   .hero-blob{ width:160px; height:160px; }
   .cube{ width:90px; height:90px; }
@@ -189,7 +176,7 @@ body.page-exit{ opacity:0; transition: opacity .35s ease; }
   0%, 100% { transform: translate(0,0) scale(1); }
   50% { transform: translate(60px,-60px) scale(1.1); }
 }
-/* Fonts */
+
 h1, h2, h3 {
   font-family: 'Poppins', sans-serif;
 }
@@ -197,20 +184,17 @@ body, p, a {
   font-family: 'Inter', sans-serif;
 }
 
-/* Default dark background */
 body {
   background: #0d1117;
   color: white;
   transition: background 1s ease, color 1s ease;
 }
 
-/* Alternate background when toggled */
 body.alt-bg {
   background: linear-gradient(135deg, #243b55, #141e30);
   color: #f0f6fc;
 }
 
-/* Animated gradient background */
 .animated-bg {
   background: linear-gradient(-45deg, #0d1117, #1a1f36, #243b55, #0d1117);
   background-size: 400% 400%;
@@ -222,8 +206,6 @@ body.alt-bg {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
-
-/* Accent styles */
 .text-accent { color: #00adb5; }
 .btn-accent {
   background-color: #00adb5;
@@ -286,7 +268,6 @@ h1 span.text-accent {
   animation: pulse-ring 2s ease-in-out infinite;
 }
 
-/* Glow Pulse Animation */
 @keyframes pulse-ring {
   0%, 100% {
     box-shadow:
@@ -304,7 +285,6 @@ h1 span.text-accent {
   }
 }
 
-/* Spin Animation */
 .spin-ring {
   animation: spin 5s linear infinite, pulse-ring 2s ease-in-out infinite;
 }
