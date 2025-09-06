@@ -35,17 +35,22 @@
         <h1 class="fw-bold mb-4 fade-in" style="--d:.05s">About Me</h1>
         <div class="row g-4">
           <div class="col-lg-6 fade-in" style="--d:.12s">
-            <p class="lead">I design and build responsive web experiences using HTML, CSS (Bootstrap) and JavaScript. I focus on accessible, fast, and delightful UIs.</p>
-            <p>Short bio — education, interests, and what you love building. Keep it concise and targeted to the roles/projects you want.</p>
+            <p class="lead">I design and build responsive web experiences using HTML, CSS (Bootstrap), JavaScript, and backend technologies like Java and Spring Boot. I focus on clean code, performance, and user-centered design.</p>
+            <p>I’m currently learning HTML, CSS, JavaScript, Java, and Spring Boot. I enjoy creating real-world projects and solving practical problems with technology.</p>
           </div>
           <div class="col-lg-6 fade-in" style="--d:.18s">
             <div class="card card-dark p-3">
-              <h5>Skills</h5>
+              <h5>Skills & Certifications</h5>
               <div class="row g-2 mt-2">
                 <div class="col-6"><span class="badge bg-accent w-100">HTML</span></div>
                 <div class="col-6"><span class="badge bg-accent w-100">CSS</span></div>
                 <div class="col-6"><span class="badge bg-accent w-100">Bootstrap</span></div>
                 <div class="col-6"><span class="badge bg-accent w-100">JavaScript</span></div>
+                <div class="col-6"><span class="badge bg-accent w-100">Java</span></div>
+                <div class="col-6"><span class="badge bg-accent w-100">Spring Boot</span></div>
+                <div class="col-6"><span class="badge bg-accent w-100">Python</span></div>
+                <div class="col-6"><span class="badge bg-success w-100">Generative AI Studio</span></div>
+                <div class="col-6"><span class="badge bg-success w-100">Python Full Course</span></div>
               </div>
             </div>
           </div>
@@ -53,20 +58,27 @@
 
         <hr class="my-5">
 
+        <!-- Certificates Section Removed -->
+
         <div class="row g-4">
-          <div class="col-md-6 fade-in" style="--d:.22s">
-            <div class="card card-dark h-100">
-              <div class="card-body">
-                <h5>Education</h5>
-                <p class="mb-0">B.E Computer Science</p>
-              </div>
-            </div>
-          </div>
           <div class="col-md-6 fade-in" style="--d:.28s">
             <div class="card card-dark h-100">
               <div class="card-body">
+                <h5>Education</h5>
+                <p class="mb-0">B.E. Computer Science</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 fade-in" style="--d:.34s">
+            <div class="card card-dark h-100">
+              <div class="card-body">
                 <h5>Experience</h5>
-                <p class="mb-0">Front-end Intern / Projects / Freelance — short bullets</p>
+                <p class="mb-0">Worked on basic backend-focused projects like:</p>
+                <ul class="mb-0 mt-2 ps-3">
+                  <li>Bank Management System (Spring Boot)</li>
+                  <li>Simple Calculator (JavaScript)</li>
+                  <li>CRUD Operations API (Java + Spring Boot)</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -85,6 +97,9 @@
     </div>
   </footer>
 
+  <script>
+    document.getElementById('year2').textContent = new Date().getFullYear();
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
